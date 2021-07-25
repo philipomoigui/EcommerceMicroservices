@@ -1,6 +1,6 @@
-﻿using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
+using MongoDB.Driver;
 
 namespace Entities.SeedData
 {

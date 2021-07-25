@@ -1,12 +1,15 @@
-﻿using Contracts;
-using Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
+using Contracts;
+using Entities;
+
+
 
 namespace Catalog.API.Controllers
 {
@@ -31,12 +34,12 @@ namespace Catalog.API.Controllers
             return Ok(products);
         }
 
-        [HttpGet("{id:lenght(24)}", Name = "GetProduct")]
+        [HttpGet("{id:length(24)}", Name = "GetProduct")]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<IActionResult> GetProduct(string id)
         {
-            var product =await _repository.GetProductByIdAsync(id);
+            var product = await _repository.GetProductByIdAsync(id);
 
             if (product == null)
             {

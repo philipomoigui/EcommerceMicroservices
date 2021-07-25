@@ -1,19 +1,21 @@
-﻿using Contracts;
-using Entities;
-using MongoDB.Driver;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+
+using MongoDB.Driver;
+
+using Contracts;
+using Entities;
+
+
 
 namespace Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly CatalogContext _context;
+        private readonly ICatalogContext _context;
 
-        public ProductRepository(CatalogContext context)
+        public ProductRepository(ICatalogContext context)
         {
             _context = context;
         }
@@ -45,10 +47,18 @@ namespace Repositories
 
         public async Task<IEnumerable<Product>> GetProductsAsync()
         {
-            return await _context
+            try
+            {
+               return await _context
                                .Products
                                .Find(p => true)
                                .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+                throw;
+            }
         }
 
         public async Task<IEnumerable<Product>> GetProductsByCategoryAsync(string category)
