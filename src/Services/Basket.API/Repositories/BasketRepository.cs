@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Basket.API.Repositories
 {
-    public class BasketRespository : IBasketRepository
+    public class BasketRepository : IBasketRepository
     {
         private readonly IDistributedCache _redisCache;
 
-        public BasketRespository(IDistributedCache redisCache)
+        public BasketRepository(IDistributedCache redisCache)
         {
             _redisCache = redisCache;
         }
@@ -20,6 +20,9 @@ namespace Basket.API.Repositories
         public async Task<ShoppingCart> GetBasket(string username)
         {
             var basket = await _redisCache.GetStringAsync(username);
+
+            if (string.IsNullOrEmpty(basket))
+                return null;
 
             return JsonConvert.DeserializeObject<ShoppingCart>(basket);
         }
