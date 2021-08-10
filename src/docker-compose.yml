@@ -7,6 +7,12 @@ services:
   basketdb:
     image: redis:alpine
 
+  discountdb:
+    image: postgres
+
+  portainer:
+    image: portainer/portainer-ce
+
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
     build:
@@ -17,7 +23,10 @@ services:
     image: ${DOCKER_REGISTRY-}basketapi
     build:
       context: .
-      dockerfile: Services/Basket.API/Dockerfile
+      dockerfile: Services/Basket/Basket.API/Dockerfile
 
 volumes:
   mongo_data:
+  portainer_data:
+  postgres_data:
+  pgadmin_data:
