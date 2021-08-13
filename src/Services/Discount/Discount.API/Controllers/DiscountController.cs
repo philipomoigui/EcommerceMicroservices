@@ -1,11 +1,12 @@
-﻿using Discount.API.Entities;
-using Discount.API.Repositories;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Mvc;
+
+using Discount.API.Entities;
+using Discount.API.Repositories;
+
 
 namespace Discount.API.Controllers
 {
