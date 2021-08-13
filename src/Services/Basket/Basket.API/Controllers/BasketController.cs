@@ -1,11 +1,12 @@
-﻿using Basket.API.Entities;
-using Basket.API.Repositories;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Mvc;
+
+using Basket.API.Entities;
+using Basket.API.Repositories;
+
 
 namespace Basket.API.Controllers
 {
