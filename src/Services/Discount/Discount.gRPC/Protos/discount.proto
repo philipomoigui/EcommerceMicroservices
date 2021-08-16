@@ -21,11 +21,11 @@ message CouponModel {
 }
 
 message CreateDiscountRequest {
-	CouponModel model = 1;
+	CouponModel Coupon = 1;
 }
 
 message UpdateDiscountRequest {
-	CouponModel model = 1;
+	CouponModel Coupon = 1;
 }
 
 message DeleteDiscountRequest {
