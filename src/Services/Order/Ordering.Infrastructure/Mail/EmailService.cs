@@ -1,14 +1,16 @@
-﻿using Ordering.Application.Contracts.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Ordering.Application.Models;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+
+using System.Net;
+
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Logging;
+
 using SendGrid;
 using SendGrid.Helpers.Mail;
-using System.Net;
+
+using Ordering.Application.Contracts.Infrastructure;
+using Ordering.Application.Models;
+
 
 namespace Ordering.Infrastructure.Mail
 {
