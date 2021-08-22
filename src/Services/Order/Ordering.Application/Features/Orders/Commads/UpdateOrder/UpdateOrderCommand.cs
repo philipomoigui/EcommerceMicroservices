@@ -4,6 +4,7 @@ namespace Ordering.Application.Features.Orders.Commads.UpdateOrder
 {
     public class UpdateOrderCommand: IRequest
     {
+        public int Id { get; set; }
         public string Username { get; set; }
         public decimal TotalPrice { get; set; }
 

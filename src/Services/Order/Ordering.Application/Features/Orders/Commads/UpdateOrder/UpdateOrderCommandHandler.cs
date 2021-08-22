@@ -10,7 +10,7 @@ using MediatR;
 
 using Ordering.Application.Contracts.Persistence;
 using Ordering.Domain.Entities;
-
+using Ordering.Application.Exceptions;
 
 namespace Ordering.Application.Features.Orders.Commads.UpdateOrder
 {
@@ -29,11 +29,10 @@ namespace Ordering.Application.Features.Orders.Commads.UpdateOrder
 
         public async Task<Unit> Handle(UpdateOrderCommand request, CancellationToken cancellationToken)
         {
-            var orderToUpdate = _mapper.Map<Order>(request);
+            var orderToUpdate = await _orderRepository.GetByIdAsync(request.Id);
             if (orderToUpdate == null)
             {
-                _logger.LogError("Order not exist in database");
-                //throw new NotFoundException()
+                throw new NotFoundException(nameof(Order), request.Id);
             }
 
             await _orderRepository.UpdateAsync(orderToUpdate);
