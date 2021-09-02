@@ -12,7 +12,7 @@ using Ordering.Application.Contracts.Persistence;
 using Ordering.Domain.Entities;
 using Ordering.Application.Exceptions;
 
-namespace Ordering.Application.Features.Orders.Commads.UpdateOrder
+namespace Ordering.Application.Features.Orders.Commands.UpdateOrder
 {
     public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand>
     {
