@@ -8,11 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 
 using MediatR;
 
-using Ordering.Application.Features.Orders.Commads.CheckoutOrder;
-using Ordering.Application.Features.Orders.Commads.DeleteOrder;
-using Ordering.Application.Features.Orders.Commads.UpdateOrder;
 using Ordering.Application.Features.Orders.Queries;
-
+using Ordering.Application.Features.Orders.Commands.CheckoutOrder;
+using Ordering.Application.Features.Orders.Commands.UpdateOrder;
+using Ordering.Application.Features.Orders.Commands.DeleteOrder;
 
 namespace Ordering.API.Controllers
 {

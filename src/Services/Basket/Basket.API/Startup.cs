@@ -11,6 +11,7 @@ using Basket.API.GrpcServices;
 using Basket.API.Repositories;
 
 using Discount.gRPC.Protos;
+using MassTransit;
 
 namespace Basket.API
 {
@@ -26,16 +27,18 @@ namespace Basket.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Redis Configuration
             services.AddStackExchangeRedisCache(opt =>
             {
                 opt.Configuration = Configuration.GetValue<string>("CacheSettings:ConnectionString");
             });
 
+            // General Configuration
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
                 (opt => opt.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
-
             services.AddScoped<DiscountGrpcService>();
 
             services.AddControllers();
@@ -43,6 +46,14 @@ namespace Basket.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Basket.API", Version = "v1" });
             });
+
+            // MassTransit-Rabbitmq Configuration
+            services.AddMassTransit(config => {
+                config.UsingRabbitMq((context, cfg) => {
+                    cfg.Host(Configuration["EventBusSettings:HostAddress"]);
+                });
+            });
+            services.AddMassTransitHostedService();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
