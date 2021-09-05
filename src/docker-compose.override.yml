@@ -97,7 +97,6 @@ services:
     ports:
       - "8002:80"
 
-
   discount.grpc:
     container_name: discount.grpc
     environment:
@@ -115,7 +114,19 @@ services:
       - "ConnectionStrings:OrderingConnectionString=Server=orderdb;Database=OrderDb;User Id=sa;Password=P@ssw0rd"  
       - "EventBusSettings:HostAddress=amqp://guest:guest@rabbitmq:5672"
     depends_on:
-        - orderdb
+      - orderdb
+      - rabbitmq
     ports:
-        - "8004:80"
+      - "8004:80"
 
+  ocelotapigateway:
+    container_name: ocelotapigateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - catalog.api
+      - basket.api
+      - discount.grpc
+      - ordering.api
+    ports:
+      - "8010:80"
