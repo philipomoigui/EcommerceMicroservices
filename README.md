@@ -139,4 +139,5 @@ I will update this readMe as I add more services and build out more features.
 # Refrences
 
 I learnt a lot from exploring Microsoft eShopOnContainers refrence app which you can find [here](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/introduce-eshoponcontainers-reference-app). 
+
 I explored most, if not all of Mehmet Ozkaya Articles on implementing cloud native applications in .Net ecosystem.
