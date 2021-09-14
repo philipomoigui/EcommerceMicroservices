@@ -5,11 +5,13 @@ This repo contains a sample application based on an ecommerce web application I 
 - Microservices
 - CQRS
 - PUB/SUB pattern
+- Clean Architecture
 
 and how to use container technologies like;
 - Docker
 - Docker-compose
 - Kubernetes (Not yet implemented)
+- Centralized Distributed Logging (using the ELK (Elastic search, Log stash, and Kibana) stack)
 
 
 # Table of contents

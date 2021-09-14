@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\SharedLibs\Common.Logging\Common.Logging.csproj" />
     <ProjectReference Include="..\..\..\SharedLibs\EventBus.Messages\EventBus.Messages.csproj" />
   </ItemGroup>
 
