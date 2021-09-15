@@ -7,6 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Services/Order/Ordering.API/Ordering.API.csproj", "Services/Order/Ordering.API/"]
+COPY ["SharedLibs/Common.Logging/Common.Logging.csproj", "SharedLibs/Common.Logging/"]
 COPY ["Services/Order/Ordering.Application/Ordering.Application.csproj", "Services/Order/Ordering.Application/"]
 COPY ["Services/Order/Ordering.Domain/Ordering.Domain.csproj", "Services/Order/Ordering.Domain/"]
 COPY ["SharedLibs/EventBus.Messages/EventBus.Messages.csproj", "SharedLibs/EventBus.Messages/"]

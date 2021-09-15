@@ -7,6 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Services/Catalog/Catalog.API/Catalog.API.csproj", "Services/Catalog/Catalog.API/"]
+COPY ["SharedLibs/Common.Logging/Common.Logging.csproj", "SharedLibs/Common.Logging/"]
 COPY ["Services/Catalog/Repositories/Repositories.csproj", "Services/Catalog/Repositories/"]
 COPY ["Services/Catalog/Contracts/Contracts.csproj", "Services/Catalog/Contracts/"]
 COPY ["Services/Catalog/Entities/Entities.csproj", "Services/Catalog/Entities/"]
