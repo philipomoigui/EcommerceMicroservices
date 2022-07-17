@@ -1,7 +1,5 @@
 ﻿using FluentValidation;
 
-using Ordering.Application.Features.Orders.Commads.CheckoutOrder;
-
 namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
 {
     public class CheckoutOrderCommandValidator: AbstractValidator<CheckoutOrderCommand>

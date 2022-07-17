@@ -4,12 +4,14 @@ using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
 
+using AutoMapper;
+using MassTransit;
+
+using EventBus.Messages.Events;
+
 using Basket.API.Entities;
 using Basket.API.Repositories;
 using Basket.API.GrpcServices;
-using AutoMapper;
-using EventBus.Messages.Events;
-using MassTransit;
 
 namespace Basket.API.Controllers
 {

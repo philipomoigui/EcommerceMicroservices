@@ -1,15 +1,17 @@
-﻿using Dapper;
-using Discount.API.Entities;
-using Microsoft.Extensions.Configuration;
-using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Threading.Tasks;
+
+using Microsoft.Extensions.Configuration;
+
+using Dapper;
+using Npgsql;
+
+using Discount.API.Entities;
+
 
 namespace Discount.API.Repositories
 {
-    public class DiscountRepository : IDiscountRepository
+	public class DiscountRepository : IDiscountRepository
     {
         private readonly IConfiguration _configuration;
         private readonly NpgsqlConnection _connection;

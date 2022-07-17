@@ -1,13 +1,15 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Threading.Tasks;
+
+using Microsoft.Extensions.Logging;
+
+using AutoMapper;
+using Grpc.Core;
+
 using Discount.gRPC.Entities;
 using Discount.gRPC.Protos;
 using Discount.gRPC.Repositories;
-using Grpc.Core;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace Discount.gRPC.Services
 {

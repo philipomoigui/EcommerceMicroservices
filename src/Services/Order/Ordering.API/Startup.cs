@@ -10,7 +10,7 @@ using MassTransit;
 using Ordering.Application;
 using Ordering.Infrastructure;
 using Ordering.API.EventBusConsumer;
-using EventBus.Messages.Events;
+
 using EventBus.Messages.Constants;
 
 namespace Ordering.API
@@ -46,7 +46,7 @@ namespace Ordering.API
             });
             services.AddMassTransitHostedService();
 
-            // General COnfiguration
+            // General Configuration
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<BasketCheckoutConsumer>();
 

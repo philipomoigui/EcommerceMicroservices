@@ -1,5 +1,6 @@
-﻿using Discount.API.Entities;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+
+using Discount.API.Entities;
 
 namespace Discount.API.Repositories
 {

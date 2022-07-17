@@ -1,11 +1,16 @@
-﻿using AutoMapper;
-using EventBus.Messages.Events;
+﻿using System;
+using System.Threading.Tasks;
+
+using Microsoft.Extensions.Logging;
+
+using AutoMapper;
 using MassTransit;
 using MediatR;
-using Microsoft.Extensions.Logging;
+
+using EventBus.Messages.Events;
+
 using Ordering.Application.Features.Orders.Commands.CheckoutOrder;
-using System;
-using System.Threading.Tasks;
+
 
 namespace Ordering.API.EventBusConsumer
 {

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Discount.gRPC.Entities
+﻿namespace Discount.gRPC.Entities
 {
-    public class Coupon
+	public class Coupon
     {
         public int Id { get; set; }
         public string ProductName { get; set; }

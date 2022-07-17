@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
 using AutoMapper;
-
 using MediatR;
 
 using Ordering.Application.Contracts.Infrastructure;

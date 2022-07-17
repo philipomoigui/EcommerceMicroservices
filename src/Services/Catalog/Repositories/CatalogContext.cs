@@ -29,12 +29,6 @@ namespace Repositories
             CatalogRepositorySeed.SeedData(products);
         }
 
-        public IMongoCollection<Product> Products
-        {
-            get
-            {
-                return _database.GetCollection<Product>("Products");
-            }
-        }
+        public IMongoCollection<Product> Products => _database.GetCollection<Product>("Products");
     }
 }
