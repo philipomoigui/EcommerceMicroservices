@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { TbHeadset } from "react-icons/tb";
 import { VscAccount } from "react-icons/vsc";
 
@@ -31,11 +31,22 @@ const TopNavigation = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center divide-x">
-          <div className="mr-[5px] border-r-[#F0F0F0]">
-            <VscAccount size={30} />
+        <div className="flex justify-center items-center">
+          <div className="mr-[5px] border-r-[#F0F0F0] font-thin">
+            <VscAccount size={40} />
           </div>
-          <div className="ml-[5px] ">Login</div>
+          <div className="ml-[5px] ">
+            <div className="relative">
+              <AiOutlineShoppingCart size={40} />
+              <div className="rounded-full bg-yellow-500 flex justify-center items-center absolute right-0 top-0 p-1 text-[10px]">
+                1
+              </div>
+            </div>
+          </div>
+          <div className="ml-[5px] flex flex-col justify-center items-center">
+            <div>My Cart</div>
+            <div>$0.00</div>
+          </div>
         </div>
       </div>
     </div>
