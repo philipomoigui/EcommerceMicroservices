@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BestSellerCard = (props: {
   itemDesc: string;
@@ -22,9 +23,9 @@ const BestSellerCard = (props: {
       </div>
       <div className="flex flex-col justify-center">
         <div>
-          <a>
+          <Link to={props.link} className="text-blue-500 hover:text-yellow-500">
             <p>{props.itemDesc}</p>
-          </a>
+          </Link>
         </div>
         <div>
           <p>${props.price}</p>
