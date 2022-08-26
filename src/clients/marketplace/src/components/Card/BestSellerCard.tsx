@@ -29,7 +29,7 @@ const BestSellerCard = (props: {
         </div>
         <div>
           <p>${props.price}</p>
-          <p>${props.listPrice}</p>
+          <p style={{ textDecoration: "line-through" }}>${props.listPrice}</p>
         </div>
       </div>
     </div>

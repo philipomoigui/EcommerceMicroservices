@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { preProcessFile } from "typescript";
 import Rating from "../Rating/Rating";
 
 const ProductCard = (props: {
@@ -7,6 +8,7 @@ const ProductCard = (props: {
   price: string;
   description: string;
   category: string;
+  rating: number;
 }) => {
   return (
     <div className="max-w-[220px] max-h-[425px] border border-black-100">
@@ -33,7 +35,7 @@ const ProductCard = (props: {
           </p>
         </div>
         <div className="mt-[10px]">
-          <Rating />
+          <Rating rating={props.rating} />
         </div>
       </div>
     </div>

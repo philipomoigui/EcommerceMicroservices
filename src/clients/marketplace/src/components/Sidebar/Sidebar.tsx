@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import BestSellerCard from "../Card/BestSellerCard";
 
 const Sidebar = () => {
@@ -7,25 +8,42 @@ const Sidebar = () => {
       <div className="w-[100%] border border-yellow-500">
         <ul className="w-[100%] flex flex-col justify-between p-[2rem]">
           <li className=" pb-[14px] border-b-2">
-            <a className="pb-[5px] tracking-wide">Electronic</a>
+            <Link
+              className="pb-[5px] tracking-wide hover:text-yellow-500"
+              to="/"
+            >
+              Electronic
+            </Link>
           </li>
           <li className="border-b-2 pb-[14px] tracking-wide">
-            <a className=" pb-[5px]">Camera</a>
+            <Link to="/" className="hover:text-yellow-500 pb-[5px]">
+              Camera
+            </Link>
           </li>
           <li className="border-b-2 pb-[14px] tracking-wide">
-            <a className="pb-[5px]">DSLR Camera</a>
+            <Link to="/" className="hover:text-yellow-500 pb-[5px]">
+              DSLR Camera
+            </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <a className="pb-[5px]">Liquid Polish</a>
+            <Link to="/" className="pb-[5px] hover:text-yellow-500">
+              Liquid Polish
+            </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <a className="pb-[5px]">HeadPhone</a>
+            <Link to="/" className=" hover:text-yellow-500 pb-[5px]">
+              HeadPhone
+            </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <a className="pb-[5px]">Windows</a>
+            <Link to="/" className="pb-[5px] hover:text-yellow-500">
+              Windows
+            </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <a className="pb-[5px]">Cloth</a>
+            <Link to="/" className="pb-[5px] hover:text-yellow-500">
+              Cloth
+            </Link>
           </li>
         </ul>
       </div>
@@ -62,6 +80,48 @@ const Sidebar = () => {
             itemDesc="Orci nulla pellentesque dignissim enim"
             link="/"
           />
+        </div>
+      </div>
+      <div className="w-[100%] border border-black-500 mt-[3rem]">
+        <div className="w-[20rem] font-[600] text-[15px] uppercase bg-[#F0F0F0] text-[#333E48] p-[1rem] uppercase">
+          information
+        </div>
+        <div className="">
+          <ul className="w-[100%] flex flex-col justify-between p-[2rem]">
+            <li className=" pb-[14px] ">
+              <Link
+                to="/"
+                className="pb-[5px] tracking-wide hover:text-yellow-500"
+              >
+                About Us
+              </Link>
+            </li>
+            <li className=" pb-[14px] tracking-wide hover:text-yellow-500">
+              <Link to="/" className=" pb-[5px]">
+                Privacy Policy
+              </Link>
+            </li>
+            <li className="pb-[14px] tracking-wide hover:text-yellow-500">
+              <Link to="/" className="pb-[5px]">
+                Delivery Information
+              </Link>
+            </li>
+            <li className="pb-[14px] tracking-wide hover:text-yellow-500">
+              <Link to="/" className="pb-[5px]">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li className="pb-[14px] tracking-wide hover:text-yellow-500">
+              <Link to="/" className="pb-[5px]">
+                Contact Us
+              </Link>
+            </li>
+            <li className="pb-[14px] tracking-wide hover:text-yellow-500">
+              <Link to="/" className="pb-[5px]">
+                Site Map
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
