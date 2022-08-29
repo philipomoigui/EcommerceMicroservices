@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BottomNavigation = () => {
   return (
@@ -10,7 +11,7 @@ const BottomNavigation = () => {
         <div className="uppercase w-[60rem]">
           <ul className="flex justify-between items-center">
             <li>
-              <a>home</a>
+              <Link to="/">home</Link>
             </li>
             <li>
               <a>contact</a>

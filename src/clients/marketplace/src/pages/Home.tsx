@@ -21,6 +21,7 @@ const Home = () => {
           description="Pretium lectus quam id leo in vitae turpis"
           category="Camera"
           rating={5}
+          slug="this-is-a-slug"
         />
         <ProductCard
           image="https://capricathemes.com/opencart/OPC09/OPC090216/OPC1/image/cache/catalog/18-208x230.jpg"
@@ -28,6 +29,7 @@ const Home = () => {
           description="Viverra ipsum nunc aliquet bibendum enim facilisis"
           category="Accesories"
           rating={2}
+          slug="this-is-a-slug"
         />
         <ProductCard
           image="https://capricathemes.com/opencart/OPC09/OPC090216/OPC1/image/cache/catalog/17-208x230.jpg"
@@ -35,6 +37,7 @@ const Home = () => {
           description="Amet aliquam id diam maecenas ultricies mi"
           category="Speaker"
           rating={4}
+          slug="this-is-a-slug"
         />
         <ProductCard
           image="https://capricathemes.com/opencart/OPC09/OPC090216/OPC1/image/cache/catalog/16-208x230.jpg"
@@ -42,6 +45,7 @@ const Home = () => {
           description="Volutpat commodo sed egestas egesta"
           category="Phone"
           rating={0}
+          slug="this-is-a-slug"
         />
       </div>
       <div className="mt-[40px]">

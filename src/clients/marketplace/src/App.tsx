@@ -1,15 +1,45 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import Navigation from "./components/Navigation/Navigation";
-import Home from "./pages/Home";
+import Loading from "./components/Loading/Loading";
+
+const HomePage = React.lazy(() => import("./pages/Home"));
+const Product = React.lazy(() => import("./pages/Product"));
+const Category = React.lazy(() => import("./pages/Category"));
 
 function App() {
   return (
     <div>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            index
+            element={
+              <Loading>
+                <HomePage />
+              </Loading>
+            }
+          />
+          <Route path="product">
+            <Route
+              path=":slug"
+              element={
+                <Loading>
+                  <Product />
+                </Loading>
+              }
+            />
+          </Route>
+          <Route path="category">
+            <Route
+              path=":type"
+              element={
+                <Loading>
+                  <Category />
+                </Loading>
+              }
+            />
+          </Route>
         </Routes>
       </Layout>
     </div>

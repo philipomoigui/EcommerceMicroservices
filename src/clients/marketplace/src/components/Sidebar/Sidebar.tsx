@@ -10,38 +10,56 @@ const Sidebar = () => {
           <li className=" pb-[14px] border-b-2">
             <Link
               className="pb-[5px] tracking-wide hover:text-yellow-500"
-              to="/"
+              to="/category/electronic"
             >
               Electronic
             </Link>
           </li>
           <li className="border-b-2 pb-[14px] tracking-wide">
-            <Link to="/" className="hover:text-yellow-500 pb-[5px]">
+            <Link
+              to="/category/camera"
+              className="hover:text-yellow-500 pb-[5px]"
+            >
               Camera
             </Link>
           </li>
           <li className="border-b-2 pb-[14px] tracking-wide">
-            <Link to="/" className="hover:text-yellow-500 pb-[5px]">
+            <Link
+              to="/category/DSLRcamera"
+              className="hover:text-yellow-500 pb-[5px]"
+            >
               DSLR Camera
             </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <Link to="/" className="pb-[5px] hover:text-yellow-500">
+            <Link
+              to="/category/liquid-polish"
+              className="pb-[5px] hover:text-yellow-500"
+            >
               Liquid Polish
             </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <Link to="/" className=" hover:text-yellow-500 pb-[5px]">
+            <Link
+              to="/category/head-phone"
+              className=" hover:text-yellow-500 pb-[5px]"
+            >
               HeadPhone
             </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <Link to="/" className="pb-[5px] hover:text-yellow-500">
+            <Link
+              to="/category/windows"
+              className="pb-[5px] hover:text-yellow-500"
+            >
               Windows
             </Link>
           </li>
           <li className="border-b-2  pb-[14px] tracking-wide">
-            <Link to="/" className="pb-[5px] hover:text-yellow-500">
+            <Link
+              to="/category/cloth"
+              className="pb-[5px] hover:text-yellow-500"
+            >
               Cloth
             </Link>
           </li>

@@ -9,6 +9,7 @@ const ProductCard = (props: {
   description: string;
   category: string;
   rating: number;
+  slug: string;
 }) => {
   return (
     <div className="max-w-[220px] max-h-[425px] border border-black-100">
@@ -17,13 +18,16 @@ const ProductCard = (props: {
           <img src={props.image} alt="" />
         </div>
         <div>
-          <Link to="/" className="text-[14px] text-[#666666] hover:underline">
+          <Link
+            to={`/product/${props.slug}`}
+            className="text-[14px] text-[#666666] hover:underline"
+          >
             {props.category}
           </Link>
         </div>
         <div className="mt-[10px]">
           <Link
-            to="/"
+            to={`/product/${props.slug}`}
             className="text-[14px] text-blue-500 hover:text-yellow-500"
           >
             {props.description}
