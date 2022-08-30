@@ -14,19 +14,19 @@ const BottomNavigation = () => {
               <Link to="/">home</Link>
             </li>
             <li>
-              <a>contact</a>
+              <Link to="/contact-us">contact</Link>
             </li>
             <li>
-              <a>affiliate</a>
+              <Link to="/">affiliate</Link>
             </li>
             <li>
-              <a>special </a>
+              <Link to="/">special</Link>
             </li>
             <li>
-              <a>site map</a>
+              <Link to="/">site map</Link>
             </li>
             <li>
-              <a>Blog</a>
+              <Link to="/">blog</Link>
             </li>
           </ul>
         </div>

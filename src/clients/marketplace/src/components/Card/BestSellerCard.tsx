@@ -6,7 +6,7 @@ const BestSellerCard = (props: {
   price: string;
   listPrice: string;
   image: string;
-  link: string;
+  slug: string;
 }) => {
   return (
     <div className="flex justify-between items-center">
@@ -23,7 +23,10 @@ const BestSellerCard = (props: {
       </div>
       <div className="flex flex-col justify-center">
         <div>
-          <Link to={props.link} className="text-blue-500 hover:text-yellow-500">
+          <Link
+            to={`/product/${props.slug}`}
+            className="text-blue-500 hover:text-yellow-500"
+          >
             <p>{props.itemDesc}</p>
           </Link>
         </div>

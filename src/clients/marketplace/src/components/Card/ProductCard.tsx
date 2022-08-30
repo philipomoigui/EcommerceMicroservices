@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { preProcessFile } from "typescript";
 import Rating from "../Rating/Rating";
@@ -12,7 +13,7 @@ const ProductCard = (props: {
   slug: string;
 }) => {
   return (
-    <div className="max-w-[220px] max-h-[425px] border border-black-100">
+    <div className="max-w-[220px] max-h-[425px] border border-black-100 mb-[40px]">
       <div className="p-[5px]">
         <div>
           <img src={props.image} alt="" />
@@ -38,8 +39,11 @@ const ProductCard = (props: {
             ${props.price}
           </p>
         </div>
-        <div className="mt-[10px]">
+        <div className="mt-[10px] flex justify-between items-center">
           <Rating rating={props.rating} />
+          <div className="rounded-full bg-[#F0F0F0] hover:bg-[#fed700] w-[2rem] h-[2rem] flex justify-center items-center">
+            <AiOutlineShoppingCart size={15} />
+          </div>
         </div>
       </div>
     </div>

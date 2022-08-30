@@ -75,28 +75,28 @@ const Sidebar = () => {
             price="82.00"
             listPrice="85.00"
             itemDesc="vestibulum sed arcu non odio"
-            link="/"
+            slug="this-is-a-slug"
           />
           <BestSellerCard
             image="https://capricathemes.com/opencart/OPC09/OPC090216/OPC1/image/cache/catalog/15-85x95.jpg"
             price="82.00"
             listPrice="85.00"
             itemDesc="Enim blandit volutpat maecenas volutpat"
-            link="/"
+            slug="this-is-a-slug"
           />
           <BestSellerCard
             image="https://capricathemes.com/opencart/OPC09/OPC090216/OPC1/image/cache/catalog/07-85x95.jpg"
             price="82.00"
             listPrice="85.00"
             itemDesc="Vivamus arcu felis bibendum ut tristique"
-            link="/"
+            slug="this-is-a-slug"
           />
           <BestSellerCard
             image="https://capricathemes.com/opencart/OPC09/OPC090216/OPC1/image/cache/catalog/02-85x95.jpg"
             price="82.00"
             listPrice="85.00"
             itemDesc="Orci nulla pellentesque dignissim enim"
-            link="/"
+            slug="this-is-a-slug"
           />
         </div>
       </div>
