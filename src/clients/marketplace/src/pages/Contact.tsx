@@ -2,6 +2,12 @@ import React from "react";
 import { AiFillHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
+const location = {
+  address: "1600 Amphitheatre Parkway, Mountain View, california.",
+  lat: 37.42216,
+  lng: -122.08427,
+};
+
 const Contact = () => {
   return (
     <div>
@@ -40,7 +46,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-[75%] pt-[6px] pb-[6px] pl-[12px] pr-[12px] text-[#333E48] bg-[#fff] border border-[#eaeaea] h-[40px]"
+                  className="w-[75%] pt-[6px] pb-[6px] pl-[12px] pr-[12px] text-[#333E48] bg-[#fff] border border-[#eaeaea] h-[40px] focus:outline-none"
                 />
               </div>
               <div className="flex justify-between items-center w-[100%] mb-[1rem]">
@@ -52,7 +58,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  className="w-[75%] pt-[6px] pb-[6px] pl-[12px] pr-[12px] text-[#333E48] bg-[#fff] border border-[#eaeaea] h-[40px]"
+                  className="w-[75%] pt-[6px] pb-[6px] pl-[12px] pr-[12px] text-[#333E48] bg-[#fff] border border-[#eaeaea] h-[40px] focus:outline-none"
                 />
               </div>
               <div className="flex justify-between w-[100%] mb-[1rem]">
@@ -63,7 +69,7 @@ const Contact = () => {
                   Enquiry:
                 </label>
                 <textarea
-                  className="w-[75%] pt-[6px] pb-[6px] pl-[12px] pr-[12px] text-[#333E48] bg-[#fff] border border-[#eaeaea]"
+                  className="w-[75%] pt-[6px] pb-[6px] pl-[12px] pr-[12px] text-[#333E48] bg-[#fff] border border-[#eaeaea] focus:outline-none"
                   rows={15}
                 ></textarea>
               </div>

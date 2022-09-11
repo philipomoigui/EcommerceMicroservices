@@ -7,6 +7,8 @@ import Contact from "./pages/Contact";
 const HomePage = React.lazy(() => import("./pages/Home"));
 const Product = React.lazy(() => import("./pages/Product"));
 const Category = React.lazy(() => import("./pages/Category"));
+const Blog = React.lazy(() => import("./pages/Blog"));
+const Post = React.lazy(() => import("./pages/Post"));
 
 function App() {
   return (
@@ -35,6 +37,24 @@ function App() {
               element={
                 <Loading>
                   <Product />
+                </Loading>
+              }
+            />
+          </Route>
+          <Route path="blog">
+            <Route
+              index
+              element={
+                <Loading>
+                  <Blog />
+                </Loading>
+              }
+            />
+            <Route
+              path=":slug"
+              element={
+                <Loading>
+                  <Post />
                 </Loading>
               }
             />

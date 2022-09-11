@@ -26,7 +26,7 @@ const BottomNavigation = () => {
               <Link to="/">site map</Link>
             </li>
             <li>
-              <Link to="/">blog</Link>
+              <Link to="/blog">blog</Link>
             </li>
           </ul>
         </div>
