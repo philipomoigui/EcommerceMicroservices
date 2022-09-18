@@ -1,0 +1,12 @@
+* Email notification - sendgrid
+* sms notification
+* retry failed notifications after few mins using - background service (hangfire)
+* add email template
+
+localhost:1023/api/notification/email
+
+email
+name
+notification-type => (Welcome, Order, otp)
+data
+

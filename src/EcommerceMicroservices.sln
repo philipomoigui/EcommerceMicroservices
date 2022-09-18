@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D663076F-F363-4639-93C3-950527214BB7}"
 EndProject
@@ -52,6 +52,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Logging", "SharedLibs\Common.Logging\Common.Logging.csproj", "{54E3B1B2-D526-4A26-B40E-1BD63456E6F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{093FC433-5DA2-4518-9FBE-48ACB4904A7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notification", "Notification", "{547B94B4-F13C-455E-9D71-399FAF238C01}"
+	ProjectSection(SolutionItems) = preProject
+		Todo.txt = Todo.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -148,6 +153,7 @@ Global
 		{656D533B-6BA0-4950-89F0-35253D4B0A55} = {C03433EE-718D-4591-82CB-F2F95B8A88A4}
 		{9A2B3377-F87E-456C-AC2F-29E1F544B516} = {C03433EE-718D-4591-82CB-F2F95B8A88A4}
 		{54E3B1B2-D526-4A26-B40E-1BD63456E6F0} = {28F86A4D-79EC-496B-9D5E-D429758F9C6E}
+		{547B94B4-F13C-455E-9D71-399FAF238C01} = {D663076F-F363-4639-93C3-950527214BB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DAEFFED7-06D7-418D-B973-DFFD311DCBB9}
